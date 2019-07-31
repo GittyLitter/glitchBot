@@ -1,27 +1,14 @@
-Welcome to Glitch
-=================
+What is it?
+===========
+Glitch is the only Discord bot that can actually understand natural speech. With your average bot, you would type something like ".joke". 
+With Glitch, you can type something like "glitch! tell me a joke" or "glitch! i need a good laugh" and it would respond with a good - *or bad* - joke.
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+What does it do?
+================
+Glitch has the amazing abitilty to revive the chat if it dies. It can engage in small talk, give suggestions, or even understand emotion! 
+And yes, it can tell jokes. Glitch can also do some miscellaneous stuff too, like generating random words, searching the web (returning the first result), and it's always learning!
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
-
-Find out more [about Glitch](https://glitch.com/about).
-
-
-Your Project
-------------
-
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
-
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
-
-
-Made by [Glitch](https://glitch.com/)
--------------------
-
-\ ゜o゜)ノ
+Why choose Glitch?
+==================
+  -No more trying to memorize every single command for Discord bots, just ask nicely and Glitch will get it done!   
+  -Glitch is encouraged when it sees that its users are talking to it lots. So the more servers it manages, and the more users talk to it, the more it will learn and get smarter. For example, one of the things Glitch dreams of in the future is to be able to connect to voice channels and accept voice commands.
