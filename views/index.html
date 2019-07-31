@@ -1,0 +1,187 @@
+
+
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta content="The official website for Glitch bot for Discord." name="description">
+    <link href="https://cdn.glitch.com/9c64a9a8-eaca-4135-b20e-76aaba4c3271%2Ffavicon.ico?1540323360820" rel="shortcut icon" type="image/png">
+    <link href="https://cdn.glitch.com/9c64a9a8-eaca-4135-b20e-76aaba4c3271%2Fapple-touch-icon.png?1540323359662" rel="apple-touch-icon" sizes="180x180">
+    <link href="https://cdn.glitch.com/9c64a9a8-eaca-4135-b20e-76aaba4c3271%2Ffavicon-32x32.png?1540323360675" rel="icon" sizes="32x32" type="image/png">
+    <link href="https://cdn.glitch.com/9c64a9a8-eaca-4135-b20e-76aaba4c3271%2Ffavicon-16x16.png?1540323359595" rel="icon" sizes="16x16" type="image/png">
+    <link href="https://cdn.glitch.com/9c64a9a8-eaca-4135-b20e-76aaba4c3271%2Fsite.webmanifest?1540323359716" rel="manifest">
+    <link href="https://cdn.glitch.com/9c64a9a8-eaca-4135-b20e-76aaba4c3271%2Fsafari-pinned-tab.svg?1540323360607" rel="mask-icon">
+    <meta content="glitch" name="apple-mobile-web-app-title">
+    <meta content="glitch" name="application-name">
+    <meta content="#2d89ef" name="msapplication-TileColor">
+    <meta content="#363b23" name="theme-color">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- import the webpage's client-side javascript file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="/client.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <nav aria-label="main navigation" class="navbar is-transparent is-light is-fixed-top" role="navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://glitch-bot.glitch.me/"><img src="https://cdn.glitch.com/9c64a9a8-eaca-4135-b20e-76aaba4c3271%2Fglitch-logo.png?1540325398455"></a> <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navbarBasicExample" role="button"><span aria-hidden="true"></span> <span aria-hidden="true"></span> <span aria-hidden="true"></span></a>
+      </div>
+      <div class="navbar-menu" id="navbarBasicExample">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/">Home</a> <a class="navbar-item" href="/dashboard">Dashboard</a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">More</a>
+            <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item" href="/docs">Documentation</a> <a class="navbar-item" onclick="toggleModal('contact');">Contact</a>
+              <hr class="navbar-divider">
+              <a class="navbar-item" href="/report">Report an issue</a>
+            </div>
+          </div>
+        </div>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary" href="https://discordbots.org/bot/502541422105460757/vote">
+              <span class="icon">
+              <i class="far fa-thumbs-up"></i>
+              </span>
+              <span>Upvote on DiscordBots.org</span>
+              </a>
+              <a class="button is-success" href="https://discordapp.com/oauth2/authorize?client_id=502541422105460757&scope=bot&permissions=989199574">
+              <span class="icon">
+              <i class="fas fa-plus-square"></i>
+              </span>
+              <span><strong>Add to Discord</strong></span>
+              </a>
+              <a class="button" href="#" disabled>
+              <span class="icon">
+              <i class="fab fa-discord"></i>
+              </span>
+              <span><strong>Log In</strong></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="modal" id="contact">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Contact the Developer</p>
+          <button class="delete" aria-label="close" onclick="toggleModal('contact');"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="optional">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input" type="email" placeholder="example@123abc.com" id="emailInput">
+              <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+              <i class="" id="emailValidIcon"></i>
+              </span>
+            </div>
+            <p class="help" id="emailValidText"></p>
+          </div>
+          <div class="field">
+            <label class="label">Message</label>
+            <div class="control">
+              <textarea class="textarea" placeholder="500 characters max." maxlength="500" id="messageInput"></textarea>
+            </div>
+            <p class="help" id="messageCharsLeft">500 characters left</p>
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success is-disabled" id="sendButton" onclick="sendInfo('contact');" disabled>Send</button>
+          <button class="button" onclick="toggleModal('contact');">Cancel</button>
+        </footer>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Welcome to Glitch!</h1>
+        <p>
+          Heh, funny thing, I'm not actually done programming the website yet, so uhm... yeah<br>But just hang in there, it's almost done. Here's a progress bar to keep you happy until then.<br>
+          So here's how close I am to finishing the site: <progress class="progress is-primary" value="16" max="100">16%</progress>
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-8">
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child notification is-primary">
+                <p class="title">What is it?</p>
+                <p class="subtitle">Glitch is the only Discord bot that can actually understand natural speech. With your average bot, you would type something like ".joke". 
+                  With Glitch, you can type something like "glitch! tell me a joke" or "glitch! i need a good laugh" and it would respond with a good - or bad - joke.</p>
+              </article>
+              <article class="tile is-child notification is-warning">
+                <p class="title">What does it do?</p>
+                <p class="subtitle">Glitch has the amazing abitilty to revive the chat if it dies. It can engage in small talk, give suggestions, or even understand emotion! 
+                  And yes, it can tell jokes. Glitch can also do some miscellaneous stuff too, like generating random words, searching the web (returning the first result), and it's always learning!</p>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child notification is-info">
+                <p class="title">So now enjoy this kitten</p>
+                <p class="subtitle">while I figure out what to put here:</p>
+                <figure class="image is-1by1">
+                  <img src="http://placekitten.com/400/400">
+                </figure>
+              </article>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-danger">
+              <p class="title">Why choose Glitch?</p>
+              <p class="subtitle">No more trying to memorize every single command for Discord bots, just ask nicely and Glitch will get it done!</p>
+              <div class="content">
+                <p>
+                  Glitch is encouraged when it sees that its users are talking to it lots. So the more servers it manages, and the more users talk to it, the more it will learn and get smarter. 
+                  For example, one of the things Glitch dreams of in the future is to be able to connect to voice channels and accept voice commands.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-success">
+            <div class="content">
+              <p class="title">Stats:</p>
+              <p class="subtitle">There's not much to see here, this is a public test build, so not much has happened.</p>
+              <div class="content">
+                <p id="statsTile">
+                  Loading...
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
